@@ -1,5 +1,3 @@
-
-
 .mouseOn{
   color: 	#4169E1;
   text-decoration:underline;
@@ -15,7 +13,7 @@
   align-content: stretch;
 }
 
-#phoneNumber{
+.cellphone__number {
   margin: 10px 0px;
   margin-left: 35px;
 
@@ -24,14 +22,11 @@
   font-size: 48px;
 }
 
-#phoneTable {
-  table-layout: fixed;
-}
-
-#phoneTable img {
+.cellphone__digits img {
   display: inline-block;
   height: 60px;
   width: 60px;
+  cursor: pointer;
 }
 
 #lockerTable{
@@ -42,7 +37,8 @@
   background-color:#eeeeee;
   border:1px solid black;
   height: 40px;
-  width: 40px;
+  min-width: 40px;
+  cursor: pointer;
 }
 
 .lockerName{
@@ -71,35 +67,27 @@
 } 
   
 .chat {
-  min-width: 860px;
   margin-top: 100px;
   margin-right: 60px;
   flex-grow: 3;
 }
 
-.chatTitle{
-  background-color:black;
-  color:white;
-  text-align:center;
-  padding:5px;
-}
-
-.chatBody {
-  padding:10px; 
-  margin-left:120px;
-}
-
-#time{color:#A9A9A9}
-
-.chatContent {
-  height:350px;
+.chat__content {
+  height: 350px;
+  min-width: 854px;
   padding-bottom: 20px;
   overflow-y: scroll;
   border-left-style: solid;
   border-right-style: solid;
 }
 
-.chatName {
+@media only screen and (max-device-width: 1024px) {
+  .chat__content {
+    min-width: 400px;
+  }
+}
+
+.chat__users {
   position: absolute;
   height:350px;
   line-height:30px;
@@ -108,11 +96,29 @@
   padding:10px; 
 }
 
-.chatFoot{
+.chat__foot{
   background-color:black;
   padding:5px; 
-} 
+}
+
+.chat__title{
+  background-color:black;
+  color:white;
+  text-align:center;
+  padding:5px;
+}
+
+.chat__dialog {
+  padding:10px; 
+  margin-left:120px;
+}
+
+#time{color:#A9A9A9} 
 
 hr {
   margin: 30px 0px;
+}
+
+.tryCode {
+  cursor: pointer;
 }

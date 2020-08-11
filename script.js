@@ -17,38 +17,38 @@ $(document).ready(function(){
 */
 
   /*--------- Mouse on --------*/
-  $(".menu p,.chatName p").mousemove(function () {
+  $(".menu p,.chat__users p").mousemove(function () {
     $(this).addClass("mouseOn");
   });
-  $(".menu p,.chatName p").mouseout(function () {
+  $(".menu p,.chat__users p").mouseout(function () {
     $(this).removeClass("mouseOn");
   });
 
   /*--------- Menu --------*/
-  $("#hotel").click(function () {
+  $(".menu__hotel").click(function () {
     window.location.reload();
   })
 
-  $("#passChapter1, #taxi").click(function(){
+  $("#passChapter1, .menu__taxi").click(function(){
     $(".dialogButton1").click();
-    $(".chatBody").children("div").hide(); /*hide all dialog*/
+    $(".chat__dialog").children("div").hide(); /*hide all dialog*/
     $("#TaxiDialog").show();
     $("#passChapter1, #LouisOnCall, #TaxiOnCall, .cellphone, .locker").hide();
   })
 
-  $("#passChapter2, #club").click(function () {
-   $("#passChapter1, .dialogButton2").click();
-   $(".chatBody").children("div").hide(); /*hide all dialog*/
-   $("#EroDialog").show();
+  $("#passChapter2, .menu__club").click(function () {
+    $("#passChapter1, .dialogButton2").click();
+    $(".chat__dialog").children("div").hide(); /*hide all dialog*/
+    $("#EroDialog").show();
     $("#passChapter2, #LouisOnCall, #TaxiOnCall, #LouisDialog4,#LouisDialog5,#LouisDialog6").hide();
   });
 
   /*--------- Chat Name --------*/
-  $(".chatName p").click(function () {
-    $(".chatBody").children("div").hide(); /*hide all dialog*/
-    $(".chatName img").hide();
+  $(".chat__users p").click(function () {
+    $(".chat__dialog").children("div").hide(); /*hide all dialog*/
+    $(".chat__users img").hide();
     $("#" + this.id.substr(4) + "Dialog").show();
-    $(".chatBody").scrollTop($(".chatBody").prop("scrollHeight"), 100);
+    $(".chat__dialog").scrollTop($(".chat__dialog").prop("scrollHeight"), 100);
   });
 
   /*--------- click button --------*/
@@ -64,33 +64,36 @@ $(document).ready(function(){
       $(this).prev().hide();/* hide br */
 
       if (whichDialog == "TaxiDialog1") { 
-        $("#taxi,#passChapter2").show();
+        $(".menu__taxi,#passChapter2").show();
         $("#passChapter1").hide();
       }
     }else{
-      $(".cellphone, .locker, #club").show();
+      $(".cellphone, .locker, .menu__club").show();
       $("#goClubButton, #passChapter2,#showLouisDialog6").hide();
     }
   });
   
 
   /*-- phone --*/
-  $("#phoneTable img").mousedown(function () {
+  $(".cellphone__digits img").mousedown(function () {
+    console.log('A')
     $(this).addClass("clickNumber");
   });
-  $("#phoneTable img").mouseup(function () {
+  $(".cellphone__digits img").mouseup(function () {
+    console.log('B')
     $(this).removeClass("clickNumber");
   });
 
-  $("#phoneTable img:not('#deleteNumber')").click(function(){
+  $(".cellphone__digits img:not('#deleteNumber')").click(function(){
+    console.log('C')
     if(this.id!="callNumber"){
-      $("#phoneNumber").append(this.id.substr(1, 1));
+      $(".cellphone__number").append(this.id.substr(1, 1));
       $("#deleteNumber").show();
     }
   });
   $("#deleteNumber").click(function(){
-    var pN = $("#phoneNumber").text();
-    $("#phoneNumber").text(pN.substring(0, pN.length - 1));
+    var pN = $(".cellphone__number").text();
+    $(".cellphone__number").text(pN.substring(0, pN.length - 1));
     if (pN.length == 1) { $("#deleteNumber").hide();}
   });
   $("#callNumber").click(function () {
@@ -101,12 +104,12 @@ $(document).ready(function(){
       "54130373": 'Claire',
       "54139318": 'Maxime'
     }
-    $(".chatBody").children("div").hide(); /*hide all dialog*/
-    if (phone[$("#phoneNumber").text()]){
-      nameStr = phone[$("#phoneNumber").text()];
+    $(".chat__dialog").children("div").hide(); /*hide all dialog*/
+    if (phone[$(".cellphone__number").text()]){
+      nameStr = phone[$(".cellphone__number").text()];
 
       if (nameStr == "Louis") {
-        $(".chatBody").children("div").hide(); /*hide all dialog*/
+        $(".chat__dialog").children("div").hide(); /*hide all dialog*/
         $("#LouisDialog").show();
 
         $("#LouisOnCall").show();
@@ -122,10 +125,10 @@ $(document).ready(function(){
     }
     else{
       $("#faultNumberDialog").show();
-      $("#faultNumberInfo").text("不存在 " + $("#phoneNumber").text() + " 这个电话号码。");
+      $("#faultNumberInfo").text("不存在 " + $(".cellphone__number").text() + " 这个电话号码。");
     }
     $(".hangUp").show();
-    $("#phoneNumber").text("");
+    $(".cellphone__number").text("");
     $("#deleteNumber").hide();
   });
 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="style/css.css" rel="stylesheet" type="text/css"/>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script type="text/javascript" src="style/jquery.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
@@ -12,61 +12,61 @@
   <div class="page">
     <div class="sidebar">
       <div class="menu">
-        <p id="hotel" type="button">宾馆篇 </p>
-        <p><img src="style/pass.jpg" style="max-height: 40px;" id="passChapter1"></p>
-        <p type=“button” id="taxi" style="display: none;">出租车公司 </p>
-        <p><img src="style/pass.jpg" style="max-height: 40px; display: none;" id="passChapter2"></p>
-        <p type="button" id="club" style="display: none;">机器人俱乐部  </p>
-        <p><img src="style/pass.jpg" style="max-height: 40px; display: none;" id="passChapter3"></p>
+        <p class="menu__hotel" type="button">宾馆篇 </p>
+        <p><img src="assets/pass.jpg" style="max-height: 40px;" id="passChapter1"></p>
+        <p class="menu__taxi" type=“button” style="display: none;">出租车公司 </p>
+        <p><img src="assets/pass.jpg" style="max-height: 40px; display: none;" id="passChapter2"></p>
+        <p class="menu__club" type="button" style="display: none;">机器人俱乐部  </p>
+        <p><img src="assets/pass.jpg" style="max-height: 40px; display: none;" id="passChapter3"></p>
       </div>
 
       <div class="cellphone" style="display: none;">
-        <p id="phoneNumber"></p>
-        <table id="phoneTable">
+        <p class="cellphone__number"></p>
+        <table class="cellphone__digits">
           <tr>
-            <td><img src="style/1.jpg" id="n1"/></td>
-            <td><img src="style/2.jpg" id="n2"/></td>
-            <td><img src="style/3.jpg" id="n3"/></td>      
+            <td><img src="assets/1.jpg" id="n1"/></td>
+            <td><img src="assets/2.jpg" id="n2"/></td>
+            <td><img src="assets/3.jpg" id="n3"/></td>      
           </tr>
           <tr>
-            <td><img src="style/4.jpg" style="max-height: 60px;" id="n4"/></td>
-            <td><img src="style/5.jpg" style="max-height: 60px;" id="n5"/></td>
-            <td><img src="style/6.jpg" style="max-height: 60px;" id="n6"/></td>      
+            <td><img src="assets/4.jpg" style="max-height: 60px;" id="n4"/></td>
+            <td><img src="assets/5.jpg" style="max-height: 60px;" id="n5"/></td>
+            <td><img src="assets/6.jpg" style="max-height: 60px;" id="n6"/></td>      
           </tr>
           <tr>
-            <td><img src="style/7.jpg" style="max-height: 60px;" id="n7"/></td>
-            <td><img src="style/8.jpg" style="max-height: 60px;" id="n8"/></td>
-            <td><img src="style/9.jpg" style="max-height: 60px;" id="n9"/></td>      
+            <td><img src="assets/7.jpg" style="max-height: 60px;" id="n7"/></td>
+            <td><img src="assets/8.jpg" style="max-height: 60px;" id="n8"/></td>
+            <td><img src="assets/9.jpg" style="max-height: 60px;" id="n9"/></td>      
           </tr>
           <tr>
-            <td><img src="style/xing.jpg" style="max-height: 60px;" /></td>
-            <td><img src="style/0.jpg" style="max-height: 60px;" id="n0"/></td>
-            <td><img src="style/jing.jpg" style="max-height: 60px;" /></td>      
+            <td><img src="assets/xing.jpg" style="max-height: 60px;" /></td>
+            <td><img src="assets/0.jpg" style="max-height: 60px;" id="n0"/></td>
+            <td><img src="assets/jing.jpg" style="max-height: 60px;" /></td>      
           </tr>
           <tr>
             <td></td>
-            <td><img src="style/da.jpg" style="max-height: 60px;" id="callNumber"/></td>
-            <td><img src="style/delete.jpg" style="max-height: 30px; display: none;" id="deleteNumber"/></td></th>
+            <td><img src="assets/da.jpg" style="max-height: 60px;" id="callNumber"/></td>
+            <td><img src="assets/delete.jpg" style="max-height: 30px; display: none;" id="deleteNumber"/></td></th>
           </tr>
         </table>
       </div>
     </div>
 
     <div class="chat">
-      <div class="chatTitle">侦探俱乐部</div>
+      <div class="chat__title">侦探俱乐部</div>
 
-      <div class="chatContent">
-        <div class="chatName">
+      <div class="chat__content">
+        <div class="chat__users">
           <p id="nameEro" type="button">Ero</p>
-          <p id="nameLouis" type="button" style="display: none;">Louis  <img src="style/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="LouisOnCall" class="onCallImage" /></p>
-          <p id="nameTaxi" type="button" style="display: none;">前台  <img src="style/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="TaxiOnCall" class="onCallImage"/></p>
-          <p id="nameLily" type="button" style="display: none;">Lily  <img src="style/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="LilyOnCall" class="onCallImage"/></p>
-          <p id="nameThomas" type="button" style="display: none;">Thomas  <img src="style/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="ThomasOnCall" class="onCallImage"/></p>
-          <p id="nameClaire" type="button" style="display: none;">Claire  <img src="style/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="ClaireOnCall" class="onCallImage"/></p>
-          <p id="nameMaxime" type="button" style="display: none;">Maxime  <img src="style/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="MaximeOnCall" class="onCallImage"/></p>
+          <p id="nameLouis" type="button" style="display: none;">Louis  <img src="assets/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="LouisOnCall" class="onCallImage" /></p>
+          <p id="nameTaxi" type="button" style="display: none;">前台  <img src="assets/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="TaxiOnCall" class="onCallImage"/></p>
+          <p id="nameLily" type="button" style="display: none;">Lily  <img src="assets/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="LilyOnCall" class="onCallImage"/></p>
+          <p id="nameThomas" type="button" style="display: none;">Thomas  <img src="assets/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="ThomasOnCall" class="onCallImage"/></p>
+          <p id="nameClaire" type="button" style="display: none;">Claire  <img src="assets/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="ClaireOnCall" class="onCallImage"/></p>
+          <p id="nameMaxime" type="button" style="display: none;">Maxime  <img src="assets/call.png" style="max-height: 16px; max-width: 16px; display: none;" id="MaximeOnCall" class="onCallImage"/></p>
         </div>
 
-        <div class="chatBody">
+        <div class="chat__dialog">
           <div id="EroDialog">
             <p id="time"> 09h02 </p>
             <p>嗨，我是Ero。</p>
@@ -238,12 +238,11 @@
         </div>
       </div>
 
-      <div class="chatFoot">
+      <div class="chat__foot">
       </div>
     </div>
 
     <div class="locker" style="display: none;">
-
       <table id=lockerTable>
         <tr>
           <th>
@@ -259,7 +258,7 @@
           </th>
           <th>
             <p>
-              <img src="style/try.jpg" style="max-height: 40px;" id="LouisTryCode" class="tryCode"/>
+              <img src="assets/try.jpg" style="max-height: 40px;" id="LouisTryCode" class="tryCode"/>
             </p>
           </th>
         </tr>
@@ -278,7 +277,7 @@
           </th>
           <th>
             <p>
-              <img src="style/try.jpg" style="max-height: 40px;" id="JulietteTryCode" class="tryCode"/>
+              <img src="assets/try.jpg" style="max-height: 40px;" id="JulietteTryCode" class="tryCode"/>
             </p>
           </th>
         </tr>
@@ -297,7 +296,7 @@
           </th>
           <th>
             <p>
-              <img src="style/try.jpg" style="max-height: 40px;" id="ThomasTryCode" class="tryCode"/>
+              <img src="assets/try.jpg" style="max-height: 40px;" id="ThomasTryCode" class="tryCode"/>
             </p>
           </th>
         </tr>
@@ -316,7 +315,7 @@
           </th>
           <th>
             <p>
-              <img src="style/try.jpg" style="max-height: 40px;" id="LilyTryCode" class="tryCode"/>
+              <img src="assets/try.jpg" style="max-height: 40px;" id="LilyTryCode" class="tryCode"/>
             </p>
           </th>
         </tr>
@@ -335,7 +334,7 @@
           </th>
           <th>
             <p>
-              <img src="style/try.jpg" style="max-height: 40px;" id="SarahTryCode" class="tryCode"/>
+              <img src="assets/try.jpg" style="max-height: 40px;" id="SarahTryCode" class="tryCode"/>
             </p>
           </th>
         </tr>
@@ -354,7 +353,7 @@
           </th>
           <th>
             <p>
-              <img src="style/try.jpg" style="max-height: 40px;" id="ClaireTryCode" class="tryCode"/>
+              <img src="assets/try.jpg" style="max-height: 40px;" id="ClaireTryCode" class="tryCode"/>
             </p>
           </th>
         </tr>
@@ -373,7 +372,7 @@
           </th>
           <th>
             <p>
-              <img src="style/try.jpg" style="max-height: 40px;" id="FabienTryCode" class="tryCode"/>
+              <img src="assets/try.jpg" style="max-height: 40px;" id="FabienTryCode" class="tryCode"/>
           </p>
           </th>
         </tr>
@@ -392,7 +391,7 @@
           </th>
           <th>
             <p>
-              <img src="style/try.jpg" style="max-height: 40px;" id="MaximeTryCode" class="tryCode"/>
+              <img src="assets/try.jpg" style="max-height: 40px;" id="MaximeTryCode" class="tryCode"/>
             </p>
           </th>
         </tr>
