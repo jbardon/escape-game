@@ -74,7 +74,7 @@
 
 .chat__content {
   height: 350px;
-  min-width: 854px;
+  min-width: 770px;
   padding-bottom: 20px;
   overflow-y: scroll;
   border-left-style: solid;
