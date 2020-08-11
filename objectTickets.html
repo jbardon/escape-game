@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="style/css.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script type="text/javascript" src="style/jquery.js"></script>
+</head>
+
+
+<body>
+
+<div id="title">
+<h1></h1>
+</div>
+<div class="menu">
+  <a href="file:///Users/jeremy/Documents/html/enigmeRobo3.html">宾馆篇</a>
+</div>
+
+<div class="content">
+  <span><img src="style/left.jpg" style="max-height: 50px; max-width: 50px;" id="TaxiOnCall" class="onCallImage"/></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+
+
+  <h2 class="scrolltitle">设置水平滚动条商品图片横行展示</h2>
+  <div class="imgshow">
+      <div class="imgzoom">
+          <img src="images/1.jpg" alt="" />
+          <div class="loading"></div>
+      </div>
+      <div class="container thumblist">
+          <ul>
+              <li>
+                  <div class="current"><a href="images/1.jpg"><img src="images/s1.jpg" alt="" /></a></div>
+                  <p><a href="http://www.51qianduan.com/" target="_blank">jquery 导航菜单 jquery和CSS3制作一个动画导航的向下滑动框菜单</a></p>
+              </li>
+              <li>
+                  <div><a href="images/2.jpg"><img src="images/s2.jpg" alt="" /></a></div>
+                  <p><a href="http://www.51qianduan.com/" target="_blank">jquery 表单美化 input文本框模拟select选择框获取选定的value值</a></p>
+              </li>
+              <li>
+                  <div><a href="images/3.jpg"><img src="images/s3.jpg" alt="" /></a></div>
+                  <p><a href="http://www.51qianduan.com/" target="_blank">jquery flow 图片切换滚动插件 带分页索引按钮控制图片左右滚动</a></p>
+              </li>
+              <li>
+                  <div><a href="images/4.jpg"><img src="images/s4.jpg" alt="" /></a></div>
+                  <p><a href="http://www.51qianduan.com/" target="_blank">jquery smartFloat插件制作仿淘宝产品列表页默认排序搜索框</a></p>
+              </li>
+              <li>
+                  <div><a href="images/5.jpg"><img src="images/s5.jpg" alt="" /></a></div>
+                  <p><a href="http://www.51qianduan.com/" target="_blank">jquery tab选项卡 ajax选项卡 静态选项卡 鼠标点击选项卡 鼠标滑过选项卡</a></p>
+              </li>
+              <li>
+                  <div><a href="images/6.jpg"><img src="images/s6.jpg" alt="" /></a></div>
+                  <p><a href="http://www.51qianduan.com/" target="_blank">jquery 图片延迟加载插件制作tab选项卡图片异步加载</a></p>
+              </li>
+              <li>
+                  <div><a href="images/7.jpg"><img src="images/s7.jpg" alt="" /></a></div>
+                  <p><a href="http://www.51qianduan.com/" target="_blank">jquery 输入框提示特效、机票预定智能输入提示、火车预定智能输入提示</a></p>
+              </li>
+              <li>
+                  <div><a href="images/8.jpg"><img src="images/s8.jpg" alt="" /></a></div>
+                  <p><a href="http://www.51qianduan.com/" target="_blank">jquery 图片特效插件 异步读取图片TOP排行榜特效</a></p>
+              </li>
+          </ul>
+      </div>
+  </div><!--imgshow end-->
+  <script type="text/javascript">
+  $(".container").hScrollPane({
+      mover:"ul",
+      moverW:function(){return $(".container li").length*178;}(),
+      showArrow:true,
+      handleCssAlter:"draghandlealter",
+      mousewheel:{moveLength:207}
+  });
+  $(function(){
+      var img=new Image();
+      var imgshowobj=$(".imgshow");
+      var imgzoom=imgshowobj.find(".imgzoom");
+      imgshowobj.find(".thumblist").find("div a").live("click",function(){
+          imgzoom.find(".loading").show();
+          img.onload=function(){
+              imgzoom.find("img").attr("src",img.src);
+              imgzoom.find(".loading").hide();
+          }
+          img.src=$(this).attr("href");
+          $(".thumblist li div a").parent().removeClass("current");
+          $(this).parent().addClass("current");
+          return false;
+      });
+  }); 
+  </script>
+
+  
+  <span><img src="style/right.jpg" style="max-height: 50px; max-width: 50px;" id="TaxiOnCall" class="onCallImage"/></span>
+</div>
+
+</body>
+</html>

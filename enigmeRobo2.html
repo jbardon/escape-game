@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="style/css.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script type="text/javascript" src="style/jquery.js"></script>
+</head>
+
+
+<body>
+
+<div id="title">
+<h1></h1>
+</div>
+
+
+<div class="menu">
+  <p></p>
+  <a href="file:///Users/jeremy/Documents/html/enigmeRobo1.html" id="hotel">宾馆篇</a>
+  <p type=“button” id="taxi">出租车公司</p>
+  <a href="file:///Users/jeremy/Documents/html/enigmeRobo3.html" style="display: none;" id="club">机器人俱乐部</a>
+</div>
+
+<div class="content">
+  <div class="chat">
+
+    <div class="chatTitle">
+    侦探俱乐部
+    </div>
+
+    <div class="chatName">
+      <p id="nameEro" class="nameList" type="button">Ero</p>
+      <p id="nameLouis" class="nameList" type="button">Louis</p>
+      <p id="nameLouisOnCall" type="button" style="display: none;">Louis  <img src="style/call.png" style="max-height: 16px; max-width: 16px;" /></p>
+      <p id="nameTaxi" class="nameList" type="button">前台</p>
+    </div>
+
+    <div class="chatBody">
+      <div id="EroDialog" class="allDialog" style="display: none;">
+        <p id="time"> 09h02 </p>
+        <p>嗨，我是Ero。</p>
+        <p>今天早上高中时的同学Louis给我打电话说他丢了非常重要的东西，他报警了但警察似乎不太打算管。</p>
+        <p>由于我高中时就喜欢推理，所以他问我能不能帮他。</p>
+        <p>很可惜，现在我正在外地出差，于是我向他推荐了你们，侦探俱乐部的成员们，有谁愿意帮帮他吗？</p>
+        <br>
+        <hr>
+        <br>
+
+        <br>
+      </div>
+
+
+      <div id="LouisDialog" class="allDialog" style="display: none;">
+        <p id="time"> 09h08 </p>
+        <p>你们好，我是Louis。</p>
+        <p>很高兴你们能帮我，我现在在“神马”宾馆，我给你们发一个定位。</p>
+        <p>你们打车过来吧，到了我把钱给你们。</p>
+        <br>
+        <hr>
+
+        <p id="time"> 09h14 </p>
+        <p>你们已经在路上了吗？</p>
+        <p>我先简单的说一下发生了什么吧。</p>
+        <p>昨天我和“机器人俱乐部”的朋友们一起喝酒，庆祝我的机器人得了冠军。</p>
+        <p>我们辗转了很多家酒吧，我喝的有点高了，醒来就在这家宾馆了。</p>
+        <p>我带过去给大家看的机器人，奖牌连同双肩包都不见了。</p>
+        <p>只有钥匙，钱包和手机还在裤兜里。</p>
+        <br>
+        <p>我确定是被偷了，因为床头柜上有张打印的字条，写着“你不配拥有它”。</p>
+        <p>是的，我已经报警了，但是警察认为这不算贵重物品，所以只是登记了一下。</p>
+        <p>拜托你们帮帮我吧！</p>
+        <br>
+        <hr>
+        
+        <div id="continue" >
+          <p id="time"> 09h28 </p>
+          <p>很抱歉现在只能给你们这么多钱，我钱包里就剩这么多了。</p>
+          <p>嗯...昨天怕喝高了乱刷卡，所以没带银行卡。</p>
+          <p>这是钱包里找到的昨天的一些小票，也许对你们有用。</p>
+            <div class="object">
+              <ul>
+                <li>288€</li>
+                <li>酒吧小票*4</li>
+                <li>出租车小票</li>
+              </ul>
+            </div>
+          <p>呀，公司突然有重要的事，我必须过去一趟。真是不好意思，有什么事电话联系！</p>
+          <br>
+          <hr>
+        </div>
+
+
+        <div id="call" >
+          <p id="time"> 10h03 </p>
+          <p>hi，我刚才接到“鸵鸟”出租车公司的电话，说我昨天把包落在出租车里了。</p>
+          <p>也许机器人和金牌都在，那个纸条就是个恶作剧，我公司还有点事，你们能帮我去看一下吗？</p>
+          <p>“鸵鸟”出租车公司就在宾馆附近，去前台说要“45271”号的包，我一会打电话通知他们。</p>
+          <br>
+          <hr>
+        </div>
+
+        <div id="call2" style="display: none;">
+          <p id="time"> 10h47 </p>
+          <p>我收到短信提示说你们已经取到包了？太感谢了，麻烦你们了。</p>
+          <p>机器人和金牌在里面吗？</p>
+          <br>
+          <hr>
+          <br id="needHideInfo">
+          <button id="getInfo" type="button">机器人在包里，不过似乎损坏了。没有看到金牌。</button> 
+        </div>
+
+        <div id="goToClub" style="display: none;">
+          <p id="time"> 10h54 </p>
+          <p>金牌不在里面？！</p>
+          <p>最重要的就是金牌了！！！！麻烦你们帮帮我吧！！！！！！</p>
+          <br>
+          <div id="someHelp" style="display: none;">
+            <p>.....！！！！我昨天似乎还去了一趟俱乐部！</p>
+            <p>俱乐部的钥匙应该也在包里，你们去俱乐部看看吧！</p>
+          </div>
+          <br id="needHideGo">
+          <hr>
+          <br id="needHideGo">
+          <button id="hightLevel" type="button">没问题，我们能搞定。</button> 
+          <button id="needHelp" type="button">没什么头绪，你再回忆一下吧。</button>
+          <button id="getHelp" type="button" style="display: none;">我们现在就去！</button>
+        </div>
+
+
+        <br>
+        <br> 
+      </div>
+
+      <div id="TaxiDialog"  class="allDialog">
+        <p id="time"> 10h34 </p>
+        <p>您好，是来领取失物的吗？</p>
+        <p>45271号？是Louis先生的包吗？</p>
+        <p>稍等...</p>
+        <p>给您。</p>
+
+        <div class="object">
+          <ul>
+            <li>双肩背</li>
+            <li>坏掉的机器人</li>
+            <li>一个挂着名牌的钥匙</li>
+          </ul>
+        </div>
+        <br>
+        <hr>
+          <br id="needHideBag">
+          <button id="getBag" type="button">谢谢</button>   
+      </div>   
+      <br>
+      <br>
+    </div>
+
+    <div class="chatFoot">
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

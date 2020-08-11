@@ -1,0 +1,113 @@
+
+
+.mouseOn{
+  color: 	#4169E1;
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+.clickNumber{
+  filter:brightness(70%);
+}
+
+.content{
+  display: flex;
+  /*justify-content: center;*/
+  margin-left: 326px;
+}
+
+.cellphone{
+  display: flex;
+  margin-left: 35px;
+  margin-top: 300px;
+}
+
+.locker{
+  display: flex;
+  margin-left: 1020px;
+  margin-top: -280px;
+}
+
+#phoneNumber{
+  position: absolute;
+  font-size: 250%;
+  margin-top:-60px;
+  margin-left: 35px;
+}
+#phoneTable{
+  position: absolute;
+  width:16%;
+}
+
+#lockerTable{
+  border-collapse: collapse;
+}
+
+.code{
+  background-color:#eeeeee;
+  border:1px solid black;
+  height: 40px;
+  width: 40px;
+
+}
+
+.lockerName{
+  font-size: 150%;
+  margin-right: 16px;
+}
+
+.codeImage{
+  margin-left: 16px;
+}
+
+.menu{
+  position: fixed;
+  margin-left: 60px;
+}
+
+.object{
+  color:#32CD32;
+} 
+  
+.chat {
+  position: absolute;
+  margin-top: 100px;
+}
+
+.chatTitle{
+  width:620px;
+  background-color:black;
+  color:white;
+  text-align:center;
+  padding:5px;
+}
+
+.chatBody{
+  width:484px;
+  height:350px;
+  float:left;
+  padding:10px; 
+  border-right-style:solid;
+  overflow:auto;
+}
+
+#time{color:#A9A9A9}
+
+.chatName{
+  line-height:30px;
+  background-color:#eeeeee;
+  border-left-style:solid;
+  height:350px;
+  width:100px;
+  float:left;
+  padding:10px; 
+}
+
+.chatFoot{
+  width:620px;
+  background-color:black;
+  color:white;
+  clear:both;
+  text-align:center;
+  padding:5px; 
+} 
