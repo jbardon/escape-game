@@ -10,33 +10,28 @@
   filter:brightness(70%);
 }
 
-.content{
-  display: flex;
-  /*justify-content: center;*/
-  margin-left: 326px;
-}
-
-.cellphone{
-  display: flex;
-  margin-left: 35px;
-  margin-top: 300px;
-}
-
-.locker{
-  display: flex;
-  margin-left: 1020px;
-  margin-top: -280px;
+.page {
+  display: inline-flex;
+  align-content: stretch;
 }
 
 #phoneNumber{
-  position: absolute;
-  font-size: 250%;
-  margin-top:-60px;
+  margin: 10px 0px;
   margin-left: 35px;
+
+  line-height: 48px;
+  min-height: 50px;
+  font-size: 48px;
 }
-#phoneTable{
-  position: absolute;
-  width:16%;
+
+#phoneTable {
+  table-layout: fixed;
+}
+
+#phoneTable img {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
 }
 
 #lockerTable{
@@ -48,21 +43,27 @@
   border:1px solid black;
   height: 40px;
   width: 40px;
-
 }
 
 .lockerName{
   font-size: 150%;
   margin-right: 16px;
+  flex-grow: 1;
 }
 
 .codeImage{
   margin-left: 16px;
 }
 
-.menu{
-  position: fixed;
+.sidebar {
+  flex-grow: 1;
+  min-width: 196px;
+  margin-right: 60px;
+}
+
+.menu {
   margin-left: 60px;
+  margin-bottom: 60px;
 }
 
 .object{
@@ -70,44 +71,48 @@
 } 
   
 .chat {
-  position: absolute;
+  min-width: 860px;
   margin-top: 100px;
+  margin-right: 60px;
+  flex-grow: 3;
 }
 
 .chatTitle{
-  width:620px;
   background-color:black;
   color:white;
   text-align:center;
   padding:5px;
 }
 
-.chatBody{
-  width:484px;
-  height:350px;
-  float:left;
+.chatBody {
   padding:10px; 
-  border-right-style:solid;
-  overflow:auto;
+  margin-left:120px;
 }
 
 #time{color:#A9A9A9}
 
-.chatName{
+.chatContent {
+  height:350px;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.chatName {
+  position: absolute;
+  height:350px;
   line-height:30px;
   background-color:#eeeeee;
-  border-left-style:solid;
-  height:350px;
   width:100px;
-  float:left;
   padding:10px; 
 }
 
 .chatFoot{
-  width:620px;
   background-color:black;
-  color:white;
-  clear:both;
-  text-align:center;
   padding:5px; 
 } 
+
+hr {
+  margin: 30px 0px;
+}
